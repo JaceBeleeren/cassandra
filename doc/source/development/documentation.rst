@@ -77,7 +77,70 @@ Working on documents locally using Sphinx
 
 *Recommended for advanced editing*
 
-Using the GitHub web interface should allow you to use most common layout elements including images. More advanced formatting options and navigation elements depend on Sphinx to render correctly. Therefor it’s a good idea to setup Sphinx locally for any serious editing. Please follow the instructions in the Cassandra source directory at ``doc/README.md``. Setup is very easy (at least on OSX and Linux).
+Using the GitHub web interface should allow you to use most common layout elements 
+including images. More advanced formatting options and navigation elements depend on
+Sphinx to render correctly. Therefore it is a good idea to setup Sphinx locally for any 
+serious editing. 
+Since a setup under windows isn't easily possible, it is recommended to
+use OSX or Linux for any work with Sphinx. 
+Furthermore ensure that you have a python version on your OS. After some struggles appeared
+with version 3.0 , it is helpful to use version 2.7.
+
+You can install sphinx with the pip command as the following:: 
+
+
+	pip install sphinx_rdt_theme 
+
+Now you should be able to build the documentation.
+So change to the doc diretory in your cassandra fork. And use::
+
+	 make html
+
+You will find the created html files in your cassandra directory under doc/build/html/...
+
+More instructions for installing sphinx and build the documentation, you can find 
+at ``doc/README.md`` .
+
+
+Short texthighlight instructions for using Sphinx
+=================================================
+
+For a fast start, here are some commands:
+
+Create a title:: 
+	
+	How to make a title
+	===================
+
+Make a box for commands::
+
+	With two colons at the end you create a box for example commands::
+
+Example : With two colons at the end you create a box for example commands::
+
+	pip...
+
+Write a cursive text:: 
+
+	*cursive font*
+
+*cursive font*
+
+Highlight something with red font color:: 
+	
+	``doc/README.md``
+
+``doc/README.md``
+
+Insert an image:: 
+
+	.. image:: images/example.png
+
+use a hyperlink:: 
+
+	`Sphinx <http://www.sphinx-doc.org/>`_
+
+`This <http://www.sphinx-doc.org/>`_  is the link to the official Sphinx Homepage, where you are able to look up more information for sphinx and the editing style.
 
 Notes for committers
 ====================
@@ -101,4 +164,3 @@ Publishing
 ----------
 
 Details for building and publishing of the site at cassandra.apache.org can be found `here <https://svn.apache.org/repos/asf/cassandra/site/src/README>`_.
-
